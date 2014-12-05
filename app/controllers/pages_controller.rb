@@ -4,6 +4,12 @@ class PagesController < ActionController::Base
     @random_sentence = random_sentence
   end
 
+  def login
+  end
+
+  def register
+  end
+
   private
 
   def random_sentence(random_sentence = '')
@@ -11,11 +17,5 @@ class PagesController < ActionController::Base
       random_sentence += " #{Faker::Hacker.public_send(%w(noun adjective verb ingverb).sample)}"
     end
     return random_sentence
-  end
-
-  def login
-  end
-
-  def register
   end
 end

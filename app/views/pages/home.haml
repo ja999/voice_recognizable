@@ -4,11 +4,7 @@
     %h1 Your sentence
     %p=@random_sentence
     .action-buttons
-      %button{:onclick => "startRecording(this);"} record
+      %button{ onclick: 'startRecording(this);' } record
+      %button{ disabled: 'disabled', onclick: 'stopRecording(this);' } stop
       = button_to "reload sentence", root_path, :method => :get
-      %button{:disabled => "", :onclick => "stopRecording(this);"} stop
-    %h2 Recordings
-    %ul#recordingslist
-    %h2 Log
-    %pre#log
   .col-md-1
