@@ -3,9 +3,10 @@
   .col-md-10
     %h1 Your sentence
     %p=@random_sentence
-    %button{:onclick => "startRecording(this);"} record
-    = button_to "Reload sentence", root_path, :method => :get
-    %button{:disabled => "", :onclick => "stopRecording(this);"} stop
+    .action-buttons
+      %button{:onclick => "startRecording(this);"} record
+      = button_to "reload sentence", root_path, :method => :get
+      %button{:disabled => "", :onclick => "stopRecording(this);"} stop
     %h2 Recordings
     %ul#recordingslist
     %h2 Log
