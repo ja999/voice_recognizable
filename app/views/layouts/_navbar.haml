@@ -8,5 +8,8 @@
         %span.icon-bar
       %a.navbar-brand{:href => "#"} Voice Recognizer
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          = link_to 'Register', new_user_path
       %form.navbar-form.navbar-right
         %button.btn.btn-default{:type => "submit"} Login
