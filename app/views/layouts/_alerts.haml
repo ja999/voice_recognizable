@@ -1,0 +1,15 @@
+- if flash.present?
+  .messages
+    .container
+      - if flash.notice.present?
+        #success.alert.alert-success.alert-dismissable
+          %button.close{ type: 'button', data: { dismiss: 'alert' }, aria: { hidden: true } } &times;
+          = flash.notice
+      - if flash[:alert].present?
+        #errors.alert.alert-warning.alert-dismissable
+          %button.close{ type: 'button', data: { dismiss: 'alert' }, aria: { hidden: true } } &times;
+          = flash[:alert]
+      - if flash[:error].present?
+        #errors.alert.alert-danger.alert-dismissable
+          %button.close{ type: 'button', data: { dismiss: 'alert' }, aria: { hidden: true } } &times;
+          = flash[:error]
