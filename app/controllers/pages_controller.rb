@@ -12,4 +12,10 @@ class PagesController < ActionController::Base
     end
     return random_sentence
   end
+
+  def login
+  end
+
+  def register
+  end
 end
