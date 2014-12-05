@@ -17,11 +17,11 @@ class UsersController < ActionController::Base
 
   def login_user
     if params[:file].present?
-      response = HTTParty.post('http://localhost:3000/register', body: {file: params[:file]})
+      response = HTTParty.post('http://localhost:3000/log_in', body: {file: params[:file]})
       response = JSON.parse(response.body)
       message =
-        if response[:user_hash].present?
-          user = User.find(response[:user_hash])
+        if response['user_hash'].present?
+          user = User.find(response['user_hash'])
           "Logged as: #{user.username}"
         else
           response[:message]
