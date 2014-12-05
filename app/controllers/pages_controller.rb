@@ -4,12 +4,6 @@ class PagesController < ActionController::Base
     @random_sentence = random_sentence
   end
 
-  def login
-  end
-
-  def register
-  end
-
   private
 
   def random_sentence(random_sentence = '')
