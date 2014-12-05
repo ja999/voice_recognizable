@@ -49,8 +49,7 @@ function stopRecording(button) {
 }
 function createDownloadLink() {
   recorder && recorder.exportWAV(function(blob) {
-    var url = URL.createObjectURL(blob);
-    __log(url);
+    Recorder.forceDownload(blob, 'register');
   });
 }
 window.onload = function init() {

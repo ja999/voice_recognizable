@@ -2,4 +2,8 @@
   = f.input :username
   = f.input :password
   = f.input :password_confirmation
+  %input{ type: 'file', id: 'file', name: 'file'}
+  %button{ onclick: 'startRecording(this);' } record
+  %button{ disabled: 'disabled', onclick: 'stopRecording(this);' } stop{}
+  %p=@random_sentence
   = f.button :submit

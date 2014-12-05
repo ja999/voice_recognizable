@@ -4,7 +4,11 @@
     %h1 Your sentence
     %p=@random_sentence
     .action-buttons
+    = simple_form_for @user, url: login_user_path do |f|
+      %input{ type: 'file', id: 'file', name: 'file'}
+      = f.file :file
       %button{ onclick: 'startRecording(this);' } record
       %button{ disabled: 'disabled', onclick: 'stopRecording(this);' } stop
       = button_to "reload sentence", root_path, :method => :get
+      = f.submit :submit
   .col-md-1

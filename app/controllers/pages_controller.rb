@@ -5,6 +5,7 @@ class PagesController < ActionController::Base
   end
 
   def login
+    @user = User.new
     @random_sentence = random_sentence
   end
 
