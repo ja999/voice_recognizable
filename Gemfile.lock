@@ -47,6 +47,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    curb (0.8.6)
     erubis (2.7.0)
     execjs (2.2.2)
     faker (1.4.3)
@@ -112,6 +113,9 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    speech2text (0.3.6)
+      curb
+      json
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -143,5 +147,6 @@ DEPENDENCIES
   netguru_bootstrapper
   rails (= 4.2.0.rc1)
   sass-rails (>= 3.2)
+  speech2text
   sqlite3
   uglifier
